@@ -21,6 +21,10 @@ html {
 
 /* Start header */
 #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 46px;
     background-color: var(--black-color);
     display: flex;
@@ -103,11 +107,11 @@ html {
 /* End header */
 
 #slider {
-
+    margin-top: 46px;
 }
 
 #content {
-
+    
 }
 
 #footer {
