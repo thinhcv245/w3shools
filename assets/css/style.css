@@ -52,7 +52,8 @@ html {
 }
 
 #nav > li:hover > a,
-#nav .subnav li:hover {
+#nav .subnav li:hover,
+#nav > li:hover > a .nav-icon-down {
     color: var(--black-color);
     background-color: #ccc;
     
@@ -83,6 +84,10 @@ html {
 
 .subnav > li {
     line-height: 38px;
+}
+
+.nav-icon-down {
+    color: var(--white-color);
 }
 
 .nav-search-icon {
