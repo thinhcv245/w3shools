@@ -1,0 +1,55 @@
+/* VAR */
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+}
+
+/* RESET CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#main {
+    
+}
+
+#header {
+    height: 46px;
+    background-color: var(--black-color);
+}
+
+#nav li {
+    display: inline-block;
+    line-height: 46px;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: var(--white-color);
+    padding: 0 24px;
+}
+
+#nav li:hover a {
+    color: var(--black-color);
+    background-color: #ccc;
+    display: inline-block;
+}
+
+#slider {
+
+}
+
+#content {
+
+}
+
+#footer {
+
+}
