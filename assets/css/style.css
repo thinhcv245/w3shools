@@ -29,6 +29,7 @@ html {
     background-color: var(--black-color);
     display: flex;
     justify-content: space-between;
+    z-index: 1;
 }
 
 #nav > li {
@@ -135,6 +136,34 @@ html {
 
 #content {
     
+}
+
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+
+#content .section-header {
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#content .section-sub-header {
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.6;
+    padding: 25px 0;
+}
+
+#content .about-text {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.4;
 }
 
 #footer {
