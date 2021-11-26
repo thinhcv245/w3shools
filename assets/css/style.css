@@ -4,11 +4,19 @@
     --black-color: #000;
 }
 
+.text-white {
+    color: var(--white-color) !important;
+}
+
 /* RESET CSS */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
 }
 
 html {
@@ -159,11 +167,35 @@ html {
     opacity: 0.6;
     padding: 25px 0;
 }
-
+/* About */
 #content .about-text {
     text-align: justify;
     font-size: 15px;
     line-height: 1.4;
+}
+
+#content .members-list {
+   padding-top: 47px;
+}
+
+#content .member-item {
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+}
+
+#content .member-name {
+    font-size: 15px;
+}
+
+#content .member-img {
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+/* Tour */
+#content .tour-section {
+    background-color: var(--black-color);
 }
 
 #footer {
