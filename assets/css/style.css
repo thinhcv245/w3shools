@@ -198,6 +198,91 @@ html {
     background-color: var(--black-color);
 }
 
+#content .tickets-list {
+    background-color: var(--white-color);
+    list-style: none;
+}
+
+#content .tickets-list li {
+    width: 800px;
+    padding: 8px 16px;
+    font-size: 15px;
+    color: #757470;
+    border-bottom: #afafaf solid 1px;
+    line-height: 22px;
+}
+
+.tickets-list .sold-out {
+    margin-left: 16px;
+    background-color: #f44336;
+    color: var(--white-color);
+    padding: 4px 8px;
+}
+
+.tickets-list .quantity {
+    float: right;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    margin-right: 16px;
+    padding: 0px 8px;
+    border-radius: 50%;
+}
+
+/* places */
+
+.places-list {
+   margin: 32px -8px 0px;
+}
+
+.place-item {
+    float: left;
+    width: 33.33333%;
+    padding: 0px 8px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    background-color: var(--white-color);
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-name {
+    font-size: 15px;
+}
+
+.place-time {
+    margin-top: 16px;
+    color: #afafaf;
+}
+
+.place-description {
+    margin-top: 16px;
+}
+
+.place-buy-btn {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    color: var(--white-color);
+    background-color: var(--black-color);
+}
+
+.place-buy-btn:hover {
+    background-color: #ddd;
+    color: var(--black-color);
+}
+
+
 #footer {
 
 }
