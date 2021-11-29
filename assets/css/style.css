@@ -8,6 +8,22 @@
     color: var(--white-color) !important;
 }
 
+.text-center {
+    text-align: center !important;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
 /* RESET CSS */
 * {
     padding: 0;
@@ -15,6 +31,7 @@
     box-sizing: border-box;
 }
 
+/* Common */
 .clear {
     clear: both;
 }
@@ -23,6 +40,53 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.row {
+   margin-left: -8px;
+   margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ddd;
+    color: var(--black-color);
+}
+
+/* Main */
 #main {
     
 }
@@ -143,7 +207,7 @@ html {
 
 
 #content {
-    
+
 }
 
 #content .content-section {
@@ -151,6 +215,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0;
+    padding-bottom: 112px;
 }
 
 #content .section-header {
@@ -176,12 +241,6 @@ html {
 
 #content .members-list {
    padding-top: 47px;
-}
-
-#content .member-item {
-    float: left;
-    width: 33.33333%;
-    text-align: center;
 }
 
 #content .member-name {
@@ -231,13 +290,7 @@ html {
 /* places */
 
 .places-list {
-   margin: 32px -8px 0px;
-}
-
-.place-item {
-    float: left;
-    width: 33.33333%;
-    padding: 0px 8px;
+   margin-top: 32px;
 }
 
 .place-img {
@@ -268,21 +321,25 @@ html {
     margin-top: 16px;
 }
 
-.place-buy-btn {
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 16px;
-    color: var(--white-color);
-    background-color: var(--black-color);
+/* Contact */
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
 }
 
-.place-buy-btn:hover {
-    background-color: #ddd;
-    color: var(--black-color);
+.contact-info i[class*="fas"] {
+    width: 30px;
 }
 
+.form-control {
+    font-size: 15px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
 
+/* footer */
 #footer {
 
 }
