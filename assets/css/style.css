@@ -89,11 +89,16 @@ html {
 
 /* Main */
 #main {
-    
+
 }
 
 /* Start header */
 #header {
+    height: 46px;
+    position: relative;
+}
+
+#header .header-css {
     position: fixed;
     top: 0;
     left: 0;
@@ -181,7 +186,7 @@ html {
 /* End header */
 
 #slider {
-    margin-top: 46px;
+    /* margin-top: 46px; */
     position: relative;
     padding-top: 50%;
     background: url(/assets/slider/slider1.jpg) top center / cover no-repeat;
@@ -213,10 +218,13 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0;
     padding-bottom: 112px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-header {
@@ -265,6 +273,7 @@ html {
 
 #content .tickets-list li {
     width: 800px;
+    max-width: 100%;
     padding: 8px 16px;
     font-size: 15px;
     color: #757470;
