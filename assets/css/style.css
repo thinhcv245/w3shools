@@ -207,7 +207,7 @@ html {
     /* margin-top: 46px; */
     position: relative;
     padding-top: 50%;
-    background: url(/assets/slider/slider1.jpg) top center / cover no-repeat;
+    background: url(../slider/slider1.jpg) top center / cover no-repeat;
 }
 
 .slider-content {
