@@ -96,6 +96,11 @@ html {
 #header {
     height: 46px;
     position: relative;
+    max-width: 100%;
+}
+
+#header .header-css {
+    width: 100%;
 }
 
 #header .header-css {
@@ -173,13 +178,26 @@ html {
     color: var(--white-color);
 }
 
-.nav-search-icon {
+.mobile-menu-btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mobile-menu-btn,
+.nav-search-btn {
     color: var(--white-color);
-    line-height: 46px;
+    justify-content: center;
     padding: 12px 24px;
 }
 
-.nav-search-icon:hover {
+.mobile-menu-btn:hover {
+    background-color: #ccc;
+    color: var(--black-color);
+}
+
+.nav-search-btn:hover {
     background-color:#f53e2d;
 }
 
@@ -249,11 +267,12 @@ html {
 }
 
 #content .members-list {
-   padding-top: 47px;
+   padding-top: 32px;
 }
 
 #content .member-name {
     font-size: 15px;
+    padding-top: 30px;
 }
 
 #content .member-img {
@@ -300,12 +319,13 @@ html {
 /* places */
 
 .places-list {
-   margin-top: 32px;
+   margin-top: 17px;
 }
 
 .place-img {
     width: 100%;
     display: block;
+    margin-top: 15px;
 }
 
 .place-img:hover {

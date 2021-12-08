@@ -14,25 +14,30 @@
     <div id="main">
         <!-- Header -->
         <div id="header">
-            <div class="header-css">
+            <div id="headercss" class="header-css">
                 <ul id="nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="#band">Band</a></li>
                     <li><a href="#tour">Tour</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li>
-                        <a href="">
+                        <a href="#">
                             More
                             <i class="nav-icon-down fas fa-caret-down"></i></a>
                         <ul class="subnav">
-                            <li><a href="">Merchandise</a></li>
-                            <li><a href="">Extras</a></li>
-                            <li><a href="">Media</a></li>
+                            <li><a href="#">Merchandise</a></li>
+                            <li><a href="#">Extras</a></li>
+                            <li><a href="#">Media</a></li>
                         </ul>
                     </li>
                 </ul>
-                <div>
-                    <i class="nav-search-icon fas fa-search"></i>
+                <!-- serach icon -->
+                <div class="row nav-search-btn">
+                    <i class="fas fa-search"></i>
+                </div>
+                <!-- mobile icon -->
+                <div id="mobile-menu" class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
                 </div>
             </div>
         </div>
@@ -60,15 +65,15 @@
                 </p>
                 <!-- member -->
                 <div class="members-list row">
-                    <div class="text-center col col-third">
+                    <div class="width-100-mobile text-center col col-third">
                         <p class="member-name">Name</p>
                         <img src="/assets/img/band/member1.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="text-center col col-third">
+                    <div class="width-100-mobile text-center col col-third">
                         <p class="member-name">Name</p>
                         <img src="/assets/img/band/member1.jpg" alt="Name" class="member-img">
                     </div>
-                    <div class="text-center col col-third">
+                    <div class="width-100-mobile text-center col col-third">
                         <p class="member-name">Name</p>
                         <img src="/assets/img/band/member1.jpg" alt="Name" class="member-img">
                     </div>
@@ -98,7 +103,7 @@
                     
                     <!-- Places -->
                     <div class="places-list row">
-                        <div class="col-third col">
+                        <div class="width-100-mobile col-third col">
                             <img src="/assets/img/places/place1.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-name">New York</h3>
@@ -107,7 +112,7 @@
                                 <a href="#" class="btn">Buy Tickets</a>
                             </div>
                         </div>
-                        <div class="col-third col">
+                        <div class="width-100-mobile col-third col">
                             <img src="/assets/img/places/place2.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-name">Paris</h3>
@@ -116,7 +121,7 @@
                                 <a href="#" class="btn">Buy Tickets</a>
                             </div>
                         </div>
-                        <div class="col-third col">
+                        <div class="width-100-mobile col-third col">
                             <img src="/assets/img/places/place3.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-name">San Francisco</h3>
@@ -136,19 +141,19 @@
                 <h2 class="section-header">CONTACT</h2>
                 <p class="section-sub-header">Fan? Drop a note!</p>
                 <div class="row">
-                    <div class="col col-half contact-info">
+                    <div class="col col-half contact-info width-100-mobile">
                         <p><i class="fas fa-map-marker-alt"></i>Chicago, US</p>
                         <p><i class="fas fa-phone-alt"></i>Phone: +00 151515</p>
                         <p><i class="fas fa-envelope"></i>Email: mail@mail.com</p>
                     </div>
-                    <div class="col col-half">
+                    <div class="col col-half width-100-mobile">
                         <form action="">
                             <div class="row">
-                                <div class="col col-half">
-                                    <input type="text" required placeholder="Name" class="form-control">
+                                <div class="col col-half width-100-mobile">
+                                    <input type="text" required placeholder="Name" class="form-control form-mobile">
                                 </div>
-                                <div class="col col-half">
-                                    <input type="email" required placeholder="Email" class="form-control">
+                                <div class="col col-half width-100-mobile">
+                                    <input type="email" required placeholder="Email" class="form-control form-mobile">
                                 </div>
                             </div>
                             <div class="row">
@@ -181,5 +186,40 @@
             <p class="copyright">Powered by <a href="">w3.css</a></p>
         </div>
     </div>
+
+    <script>
+
+        // open/close menu
+        var header = document.getElementById('header');
+        var headercss = document.getElementById('headercss');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var currentHeight = headercss.clientHeight;
+
+        mobileMenu.onclick = function() {
+            var isClosed = headercss.clientHeight === currentHeight;
+            if (isClosed){
+                headercss.style.height = 'auto';
+            } else {
+                headercss.style.height = null;
+            }
+        }
+
+        // click close menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++){
+            var menuItem = menuItems[i];
+            var event;
+            
+            menuItem.onclick = function() {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if(isParentMenu){
+                    event.preventDefault();
+                } else {
+                    headercss.style.height = null;
+                }
+            }
+        }
+
+    </script>
 </body>
 </html>
