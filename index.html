@@ -109,7 +109,7 @@
                                 <h3 class="place-name">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn">Buy Tickets</a>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="width-100-mobile col-third col">
@@ -118,7 +118,7 @@
                                 <h3 class="place-name">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn">Buy Tickets</a>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="width-100-mobile col-third col">
@@ -127,7 +127,7 @@
                                 <h3 class="place-name">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn">Buy Tickets</a>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
 
@@ -187,6 +187,35 @@
         </div>
     </div>
 
+    <div class="modal">
+        <div class="modal-container js-modal-container">
+            <i class="fas fa-times modal-close js-modal-close"></i>
+            <div class="modal-heading">
+                <i class="fas fa-suitcase"></i>
+                Tickets
+            </div>
+    
+            <div class="modal-body">
+                <label for="modal-quantity" class="modal-lable">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p class="">Tickets, $15 per person</p>
+                    
+                </label>
+                <input class="modal-input" type="text" name="" id="modal-quantity" placeholder="How many?">
+                <label for="modal-email" class="modal-lable">
+                    <i class="fas fa-user"></i>
+                    <p class="">Send To</p>
+                </label>
+                <input class="modal-input" type="email" name="" placeholder="Enter email" id="modal-email">
+    
+                <button id="buy-tickets">Pay <i class="fas fa-check"></i></button>
+    
+                <footer class="modal-footer">Need<a href="" class="modal-help">help?</a></footer>
+                
+            </div>
+        </div>
+    </div>
+
     <script>
 
         // open/close menu
@@ -220,6 +249,37 @@
             }
         }
 
+    </script>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        const modalClose = document.querySelector('.js-modal-close')
+
+        // Hàm hiển thị modal mua vé thêm class open vào modal
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+        // Hàm ẩn modal mua vé gỡ bỏ class open của modal
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
+        
+        // Lặp qua từng thẻ button và nghe hành vi click
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+        // Nghe hành vi click vào button close
+        modalClose.addEventListener('click', hideBuyTickets)
+
+        // Ẩn modal khi ấn ngoài container
+        modal.addEventListener('click', hideBuyTickets)
+
+        modalContainer.addEventListener('click', function(event) {
+            // ngăn chặn hành vi nổi bọt
+            event.stopPropagation()
+        })
     </script>
 </body>
 </html>
